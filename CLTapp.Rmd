@@ -1,3 +1,79 @@
+---
+title: "Central Limit Theorem Demo"
+author: "Felipe Campelo"
+date: "February 5, 2015"
+output: html_document
+runtime: shiny
+---
+
+This is a small application intended at illustrating some concepts related to the [Central Limit Theorem](http://www.math.uah.edu/stat/sample/CLT.html).
+
+```{r,echo=F}
+library(shiny)
+shinyAppDir(getwd(),
+            options=list(width="100%",
+                         height=1000)) 
+```
+The idea is quite simple: pick a distribution of choice (**distr**) 
+from a drop-down menu, and select the target sample size (**n**) using a slider. The app then shows you two plots:
+
+1. Histogram containing **n** samples from distribution **distr**, overlayed with the theoretical pdf of the selected distribution;  
+2. Histogram of 999 mean values of **n** samples from **distr**, overlayed with the best fitting Gaussian.
+
+From these two plots it is possible to observe a few interesting characteristics, such as the Gaussian sample distribution of the means and the decreasing variance of the sample distribution of means.
+
+This app was created using [Shiny](http://shiny.rstudio.com), which is a web application framework for [R](http://www.r-project.org) developed by Winston Chang and the fine folks from [RStudio](http://www.rstudio.com). The source code for the app above is somewhat simple, and consists of two files:
+
+```{r,eval=FALSE}
+## ui.R - Defines the user interface
+library(shiny)
+
+# Define UI for application that draw the plots to demonstrate the CLT
+shinyUI(fluidPage(
+      
+      # Application title
+      titlePanel("Central Limit Theorem - Continuous Distributions"),
+      
+      # Sidebar with:
+      # - A dropdown menu to choose the distribution
+      # - A slider to select the sample size for the CLT experiment
+      sidebarLayout(
+            sidebarPanel(
+                  selectInput("distr",
+                              "Distribution",
+                              choices = c("Beta",
+                                          "Chi.squared",
+                                          "Exponential",
+                                          "F",
+                                          "Gamma",
+                                          "Lognormal",
+                                          "Normal",
+                                          "T",
+                                          "Uniform",
+                                          "Weibull"),
+                              selected = "Lognormal"),
+                  sliderInput("nobs",
+                              "Sample size",
+                              min = 10,
+                              max = 500,
+                              step = 10,
+                              value = 30,
+                              ticks = F,
+                              animate=list(interval=500,loop=F))
+            ),
+            
+            # Show a plot of the generated distribution
+            mainPanel(
+                  plotOutput("distrPlot"),
+                  plotOutput("meansPlot")
+            )
+      )
+))
+```
+
+Quite easy, right? The other file is somewhat longer, so be patient (or maybe just skip ahead):
+
+```{r,eval=FALSE}
 # Function to plot the original distribution
 distrplot<-function(dname,basefunc,nobs,...){
     # Set graphical parameters
@@ -233,3 +309,15 @@ shinyServer(function(input, output) {
     })
     
 })
+```
+
+Easy, right? ;-)
+
+By the way, this page was also implemented in RStudio, using their [R Markdown](http://rmarkdown.rstudio.com) capabilities to convert my code into a simple, human-readable report.
+
+I hope you enjoy this little demo. This is my very first shiny app, so comments, suggestions and (preferrably constructive) criticism are all very welcome.
+
+Cheers,  
+Felipe
+
+

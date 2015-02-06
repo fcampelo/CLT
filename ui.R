@@ -1,6 +1,3 @@
-
-library(shiny)
-
 # Define UI for application that draw the plots to demonstrate the CLT
 shinyUI(fluidPage(
       
