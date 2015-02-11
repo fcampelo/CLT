@@ -10,7 +10,7 @@ From these two plots it is possible to observe a few interesting characteristics
 
 This app was created using [Shiny](http://shiny.rstudio.com), which is a web application framework for [R](http://www.r-project.org) developed by Winston Chang and the fine folks from [RStudio](http://www.rstudio.com). The source code for the app above is somewhat simple, and consists of the two files shown to the right. Easy, right? ;-)
 
-By the way, this page was also implemented in RStudio, using their [R Markdown](http://rmarkdown.rstudio.com) capabilities to convert my code into a simple, human-readable report.
+This README page was also implemented in RStudio, using [R Markdown](http://rmarkdown.rstudio.com).
 
 I hope you enjoy this little demo. This is my very first shiny app, so comments, suggestions and (preferrably constructive) criticism are all very welcome.
 
