@@ -1,4 +1,4 @@
-# Function to plot the original distribution
+# Function to plot the original distribution 
 distrplot<-function(dname,basefunc,nobs,...){
     # Set graphical parameters
     par(las=1,

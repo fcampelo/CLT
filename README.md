@@ -1,3 +1,5 @@
+### Central Limit Theorem Demo
+
 This is a small application intended at illustrating some concepts related to the [Central Limit Theorem](http://www.math.uah.edu/stat/sample/CLT.html).
 
 The idea is quite simple: you pick a distribution of choice (**distr**) 

@@ -1,4 +1,4 @@
-# Define UI for application that draw the plots to demonstrate the CLT
+# Define UI for application that draw the plots to demonstrate the CLT 
 shinyUI(fluidPage(
       
       # Application title
