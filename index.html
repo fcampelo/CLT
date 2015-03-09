@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Central Limit Theorem</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Central Limit Theorem">
+  <meta name="author" content="Felipe Campelo, Ph.D.">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <aside class="gdbar">
+    <img src="assets/img/logo.png">
+  </aside>
+  <hgroup class="auto-fadein">
+    <h1>Central Limit Theorem</h1>
+    <h2>A demonstration using Shiny Apps</h2>
+    <p>Felipe Campelo, Ph.D.<br/>Dept. Electrical Engineering<br/>Universidade Federal de Minas Gerais</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Summary</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This document presents a demo app for the Central Limit Theorem (CLT), developed using <a href="http://shiny.rstudio.com/">Shiny Apps</a> on <a href="http://rstudio.com/">RStudio</a>.</p>
+
+<p>Students can explore different probability distributions and sample sizes, and verify that the sampling distribution of means will be approximately normal with specific means/variances regardless of the distribution shape of the original data.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Relevance</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The <a href="http://www.encyclopediaofmath.org/index.php/Central_limit_theorem">CLT</a> is an important result in statistical theory which, besides being quite interesting by itself, is also immensely useful in inference since it allows us to employ methods based on normal distributions to inferences about the means of non-normal populations.</p>
+
+<p>A quick definition of the CLT:
+<center><font size=5>
+Let \(y_1,\ldots,y_n\) be a sequence of independent and identically distributed (iid)<br/>random variables,with mean \(\mu\) and finite variance \(\sigma^2\). Then:
+</font></center>
+\[z_n = \frac{\sum{y_i} - n\mu}{\sqrt{n\sigma^2}}\]
+<center><font size=5>is distributed approximately as a standard normal variable, that is, \(z_n\sim\mathcal{N}(0,1)\).</font></center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>The app</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>You can find the app on <a href="https://fcampelo.shinyapps.io/CLT_demo/">shinyapps.io</a> as well as on <a href="http://drwho.cpdee.ufmg.br:3838/CLT/">my personal server</a>. The source code is available from <a href="https://github.com/fcampelo/CLT">Github</a>. It looks something like this (with some code and a short description too. Go check the real thing!):</p>
+
+<p><center><img src="assets/img/CLTdemo.png" alt="App screenshot" width=85%></center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>To know more</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>About the CLT: <a href="http://en.wikipedia.org/wiki/Central_limit_theorem">Wikipedia</a>, <a href="http://mathworld.wolfram.com/CentralLimitTheorem.html">Wolfram Mathworld</a>;<br></li>
+<li>About Shiny: <a href="http://shiny.rstudio.com/">Shiny Apps</a>;<br></li>
+<li>About Slidify (which was used to make these slides): <a href="http://slidify.org">Slidify</a>;<br></li>
+<li>About the author: <a href="http://drwho.cpdee.ufmg.br/joomla/index.php/felipe-campelo">My profile</a>, <a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?metodo=apresentar&amp;id=K4762838H8#ArtigosCompletos">My publications</a>.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Summary'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Relevance'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='The app'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='To know more'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
